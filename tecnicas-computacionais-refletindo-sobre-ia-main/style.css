@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root { /*definições que serão usadas em toda a pagina como variaveis*/
+    --cor-fundo: #01080E; /*variaveis*/
+    --cor-principal: #0B0D20 ;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+}
+  
+body { /*definições do corpo da pagina - se aplicao a pagina toda*/
+    background-color: var(--cor-fundo); /*cor do fundo*/
+    color: var(--cor-texto);/*cor da fonte do texto*/
+    font-family: 'Inter', sans-serif;/*tipo da fonte do texto*/
+    display: flex;/* define que os itens ficarão em colunas uma ao lado da outra*/
+    justify-content: center;/*define como o espaço e distribuido dentro da pagina e os alinhando*/
+    align-items: center;/*alinha os itens dentro do container flex ao centro*/
+    min-height: 100vh;/*define que o elemento vai usar 100% do espaço de viewport*/
+}
+
+.caixa-principal{ /*definições a serem aplicadas a caixa-principal*/
+    background-color: var(--cor-principal);/*cor do fundo*/
+    width: 90%; /*largura*/
+    max-width: 600px; /*largura maxima*/
+    text-align: center; /*alinhamento horizontal de um texto dentro do elemento*/
+    padding: 20px; /*espaçamento interno*/
+}
+
+h1, .caixa-perguntas, .caixa-resultado{ /*definições para os elemento h1, .caixa-perguntas, .caixa-resultado */
+    font-family: 'Chakra Petch', sans-serif; /*tipo da fonte do texto*/
+}
+
+h1 { /*definições para o h1 - titulo 1*/
+    color: var(--cor-destaque); /*cor da fonte do texto*/
+}
+
+button { /*definições para os botoes*/
+    background-color: var(--cor-secundaria); /*cor do fundo*/
+    color: var(--cor-texto); /*cor da fonte do texto*/
+    border: none;/*retira as bordas do elemento - elas ficao invisiveis*/
+    border-radius: 15px; /*define o espaço ao redor do elemento*/
+    padding: 15px; /*espaçamento interno*/
+    transition: background-color 0.3s; /*faz uma transiçao entre os elementos*/
+}
+
+button:hover { /*se ativa quando o ponteiro do mouse passa por cima do botao*/
+    background-color: var(--cor-destaque); /*cor do fundo*
+    color: var(--cor-principal); /*cor da fonte do texto*/
+}
+
+.caixa-resultado{/*definições da caixa de resultado*/
+    display: none; /*faz com que ela não apareca*/
+}
+
+.caixa-resultado.mostrar{ /*definições da caixa de resultado sendo mostrada*/
+    display: block; /*faz com que o elemento seja mostrado em um bloco*/
+}
+
+.caixa-alternativas{ /*definições da caixa de resultado*/
+    display: flex; /* define que os itens ficarão em colunas uma ao lado da outra*/
+    flex-direction: column; /*define como o elemento sera apresentado - como colunas*/
+    gap: 10px; /*espaço entre os elementos*/
+}
